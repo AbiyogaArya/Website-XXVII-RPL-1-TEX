@@ -1,0 +1,410 @@
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website XXVII RPL 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      body {
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        color: white;
+        padding: 20px;
+        overflow-x: hidden;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .logo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #00ffff;
+        box-shadow: 0 0 20px #00ffff;
+        display: inline-block;
+      }
+
+      .judul {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 2.2rem;
+        color: #00ffff;
+        text-shadow: 0 0 15px #00ffff;
+        margin-top: 20px;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3);
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 12px 20px rgba(0, 255, 255, 0.4);
+      }
+
+      .card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #00ffff;
+        box-shadow: 0 0 10px #00ffff;
+        margin-bottom: 10px;
+        transition: transform 0.3s;
+      }
+
+      .card:hover img {
+        transform: scale(1.1);
+      }
+
+      .card h2 {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+        color: #ffffff;
+        font-weight: 700;
+      }
+
+      .card a {
+        color: #00ffff;
+        text-decoration: none;
+        font-size: 0.9rem;
+        display: inline-block;
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: text-shadow 0.3s;
+      }
+
+      .card a:hover {
+        text-shadow: 0 0 5px #00ffff;
+        text-decoration: underline;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #00ffff;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #0f2027;
+      }
+
+      .lagu-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px; /* jarak dari atas, misal dari bagian kartu */
+        margin-bottom: 30px;
+      }
+
+      .cyber-btn {
+        font-family: 'Orbitron', sans-serif;
+        background: black;
+        color: #00ffea;
+        border: 2px solid #00ffea;
+        padding: 12px 24px;
+        font-size: 18px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea inset;
+      }
+
+      .cyber-btn:hover {
+        color: black;
+        background: #00ffea;
+        box-shadow: 0 0 20px #00ffea, 0 0 30px #00ffea inset;
+        transform: scale(1.05);
+      }
+
+      .lagu-container {
+        display: flex;
+        justify-content: center;
+        margin: 40px 0; /* jarak atas dan bawah, bisa kamu sesuaikan */
+      }
+
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+      .footer {
+        text-align: center;
+        padding: 20px;
+        margin-top: 60px;
+        border-top: 1px solid #00ffff;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 0.9rem;
+        color: #00ffff;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="img/Logokelas.jpg" alt="Logo Kelas" class="logo" />
+      <h1 class="judul">XXVII RPL 1 - Informatics is our expertise</h1>
+    </div>
+
+    <audio id="lagu" loop>
+      <source src="audio/Tulus.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div class="lagu-container">
+      <button class="cyber-btn" onclick="document.getElementById('lagu').play()">Putar Lagu</button>
+    </div>
+    <div class="container">
+      <div class="card">
+        <img src="img/imgsis/Arya2.jpg" alt="Foto Siswa" />
+        <h2>Abiyoga Arya</h2>
+        <a href="https://instagram.com/ab_yga" target="_blank">@Ab_yga</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Putra.jpg" alt="Foto Siswa" />
+        <h2>Rizky Putra</h2>
+        <a href="https://instagram.com/piuutraa____" target="_blank">@piuutraa____</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Akbar.jpg" alt="Foto Siswa" />
+        <h2>Akbar Maulana</h2>
+        <a href="https://instagram.com/akbrsoftspoken_" target="_blank">@akbrsoftspoken_</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Tasya.jpg" alt="Foto Siswa" />
+        <h2>Anastasya Fairuz</h2>
+        <a href="https://instagram.com/p1xel.0cean" target="_blank">@p1xel.0cean</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/anisa.jpg" alt="Foto Siswa" />
+        <h2>Annisa Putri</h2>
+        <a href="https://instagram.com/annisaputriismawati_" target="_blank">@annisaputriismawati_</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Arman.jpg" alt="Foto Siswa" />
+        <h2>Armand Nouval</h2>
+        <a href="https://instagram.com/armand_2303" target="_blank">@armand_2303</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Zaky.jpg" alt="Foto Siswa" />
+        <h2>Ashab Zaky</h2>
+        <a href="https://instagram.com/zaky_1515" target="_blank">@zaky_1515</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Yordan.jpg" alt="Foto Siswa" />
+        <h2>Bagus Yordan</h2>
+        <a href="https://instagram.com/jordansja_" target="_blank">@jordansja_</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Cecille.jpg" alt="Foto Siswa" />
+        <h2>Cecille Nafisah</h2>
+        <a href="https://instagram.com/cn0tvni" target="_blank">@cn0tvni</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Donis.jpg" alt="Foto Siswa" />
+        <h2>Donis Cahaya</h2>
+        <a href="https://instagram.com/dns.cah" target="_blank">@dns.cah</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Ian.jpg" alt="Foto Siswa" />
+        <h2>Fabian Maulana</h2>
+        <a href="https://instagram.com/steii1" target="_blank">@steii1</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Fagi.jpg" alt="Foto Siswa" />
+        <h2>Faghiatul Azroh</h2>
+        <a href="https://instagram.com/rubb.yfa" target="_blank">@rubb.yfa</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Bila.jpg" alt="Foto Siswa" />
+        <h2>Fisabilla Nindya</h2>
+        <a href="https://instagram.com/fbllaa_" target="_blank">@fbllaa_</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Gendis.jpg" alt="Foto Siswa" />
+        <h2>Gendis Kirani</h2>
+        <a href="https://instagram.com/krniprgsti_" target="_blank">@krniprgsti_</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Hirka.jpg" alt="Foto Siswa" />
+        <h2>Hirka Anugrah</h2>
+        <a href="https://instagram.com/hhrk_15" target="_blank">@hhrk_15</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Irgi.jpg" alt="Foto Siswa" />
+        <h2>Irgi Maulidin</h2>
+        <a href="https://instagram.com/irrgiieee_" target="_blank">@irrgiieee_</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Kayna.jpg" alt="Foto Siswa" />
+        <h2>Kayna Zahra</h2>
+        <a href="https://instagram.com/kaynaazh" target="_blank">@kaynaazh</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Laila.webp" alt="Foto Siswa" />
+        <h2>Laila Umaiyah</h2>
+        <a href="https://instagram.com/lala.losttyouu_" target="_blank">@lala.losttyouu_</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Fadlan.jpg" alt="Foto Siswa" />
+        <h2>M. Fadlan</h2>
+        <a href="https://instagram.com/fadlanrmdn_18" target="_blank">@fadlanrmdn_18</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Sofa.jpg" alt="Foto Siswa" />
+        <h2>Mohammad Sofa</h2>
+        <a href="https://instagram.com/sofahasani_" target="_blank">@sofahasani_</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Abiyu.jpg" alt="Foto Siswa" />
+        <h2>Muhammad Abiyyu</h2>
+        <a href="https://instagram.com/masf283" target="_blank">@masf283</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Faizul.jpg" alt="Foto Siswa" />
+        <h2>Muhammad Faizul</h2>
+        <a href="https://instagram.com/faizzulflhh" target="_blank">@faizzulflhh</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Imam.jpg" alt="Foto Siswa" />
+        <h2>Muhammad Imamuddin</h2>
+        <a href="https://instagram.com/imam261107" target="_blank">@imam261107</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Nabil.jpeg" alt="Foto Siswa" />
+        <h2>Nabil Zahra</h2>
+        <a href="https://instagram.com/_nzastii" target="_blank">@_nzastii</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Natasya.jpg" alt="Foto Siswa" />
+        <h2>Natasya Fitriya</h2>
+        <a href="https://instagram.com/natasanabila1" target="_blank">@natasanabila1</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Niko.jpg" alt="Foto Siswa" />
+        <h2>Nikolaus Satrio</h2>
+        <a href="https://instagram.com/satrioo.adi" target="_blank">@satrioo.adi</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Tiara.jpg" alt="Foto Siswa" />
+        <h2>Novi Mutiara</h2>
+        <a href="https://instagram.com/novimutiaa_" target="_blank">@novimutiaa_</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Tatak.jpg" alt="Foto Siswa" />
+        <h2>Okta Nur</h2>
+        <a href="https://instagram.com/0svtri" target="_blank">@0svtri</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Nadya.jpg" alt="Foto Siswa" />
+        <h2>Putri Nadya</h2>
+        <a href="https://instagram.com/bogummmy" target="_blank">@bogummmy</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Radit.jpg" alt="Foto Siswa" />
+        <h2>Raditya Muhammad</h2>
+        <a href="https://instagram.com/raditmhis" target="_blank">@raditmhis</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Revon.jpg" alt="Foto Siswa" />
+        <h2>Revon Perrisa</h2>
+        <a href="https://instagram.com/revonnayaka" target="_blank">@revonnayaka</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Sintia.jpg" alt="Foto Siswa" />
+        <h2>Shintya Fanisa</h2>
+        <a href="https://instagram.com/cigarettes_after_shiit" target="_blank">@cigarettes_after_shiit</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Elvira.jpg" alt="Foto Siswa" />
+        <h2>Talita Elviratul</h2>
+        <a href="https://instagram.com/tlelvirnw_0" target="_blank">@tlelvirnw_0</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Viana.jpg" alt="Foto Siswa" />
+        <h2>Tri Oktaviana</h2>
+        <a href="https://instagram.com/viana.rmndni" target="_blank">@viana.rmndni</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Fiki.jpg" alt="Foto Siswa" />
+        <h2>Vicky Ardiansyah</h2>
+        <a href="https://instagram.com/vickyardiansyah2640" target="_blank">@vickyardiansyah2640</a>
+      </div>
+
+      <div class="card">
+        <img src="img/imgsis/Fanya.jpg" alt="Foto Siswa" />
+        <h2>Zefanya Aurelia</h2>
+        <a href="https://instagram.com/zefanyaureliaeifelin" target="_blank">@zefanyaureliaeifelin</a>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>&copy; XXVII RPL 1 | Our Favorite Informatics</p>
+    </footer>
+  </body>
+</html>
